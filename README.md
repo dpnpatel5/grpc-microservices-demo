@@ -27,7 +27,7 @@ pip install grpcio grpcio-tools
 
 ### Build the Server
 
-1. **Generate gRPC Code and Build the Server**:
+**Generate gRPC Code and Build the Server**:
    ```bash
    make
    ```
@@ -37,3 +37,16 @@ pip install grpcio grpcio-tools
 ```bash
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. user_management.proto
 ```
+## Example
+**Start the Server (ensure the server is running):**
+```bash
+./user_management_server
+```
+**Run the Python Client:**
+```bash
+python user_management_client.py
+```
+
+
+
+
