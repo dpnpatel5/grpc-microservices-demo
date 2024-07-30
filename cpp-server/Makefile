@@ -12,7 +12,7 @@ LDFLAGS += `pkg-config --libs --static protobuf grpc++ absl_flags absl_flags_par
 # Paths
 PROTOC = protoc
 GRPC_CPP_PLUGIN = grpc_cpp_plugin
-PROTOS_PATH = -I./
+PROTOS_PATH = -I./../proto
 GRPC_CPP_PLUGIN_PATH ?= `which $(GRPC_CPP_PLUGIN)`
 
 
