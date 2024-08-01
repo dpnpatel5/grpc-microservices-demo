@@ -32,7 +32,7 @@ user_management: user_management.pb.o user_management.grpc.pb.o user_management_
 	$(CXX) -o $@ -c $(CFLAGS) $^
 
 # Generate Protobuf and gRPC source files
-%.pb.cc %.pb.h %.grpc.pb.cc %.grpc.pb.h: %.proto
+%.pb.cc %.pb.h %.grpc.pb.cc %.grpc.pb.h: ../proto/%.proto
 	$(PROTOC) $(PROTOS_PATH) --cpp_out=. --grpc_out=. --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN_PATH) $<
 
 # Clean up

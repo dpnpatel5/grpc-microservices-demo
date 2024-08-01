@@ -35,7 +35,8 @@ pip install grpcio grpcio-tools
 ### Generate Python code required to interact with the gRPC service defined in user_management.proto.
 
 ```bash
-python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. user_management.proto
+cd python-client
+python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. --proto_path=../proto user_management.proto
 ```
 ## Example
 **Start the Server (ensure the server is running):**
